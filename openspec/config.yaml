@@ -12,6 +12,23 @@ context: |
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.
 rules:
+  proposal:
+    - |
+      Challenge each area below. Give an answer or "N/A, because ..." and ask the engineer about anything unclear. Do not skip an area silently.
+        - Security: threat model (assets, actors, trust boundaries, entry points), authn/authz, input validation, secrets, supply chain, abuse cases, insider misuse.
+        - Data and privacy: data collected, stored or moved; classification (PII); encryption; retention and deletion; compliance; residency; audit logging.
+        - Reliability: failure modes, timeouts, retries, idempotency, partial failure, observability, alerting, runbook.
+        - Concurrency and consistency: races, ordering, eventual consistency, distributed transactions.
+        - Cross-codebase: affected codebases, contract or API changes, versioning, deploy order, consumers outside our boundary, shared data stores, ownership and approvals.
+        - Compatibility: backward and forward compatibility, migrations, deprecation and support period.
+        - Rollout: feature flags, rollback, non-prod testing, seed data, reversibility of the decision.
+        - Scale and cost: capacity, performance budgets, cloud spend, behavior at 10x load.
+        - Product: why now, cost of not doing it, non-goals, success measures, simpler alternatives, reuse of existing capabilities.
+        - Quality: testability, edge cases, error states, accessibility, i18n, UX impact.
+        - Maintenance: documentation, support impact, tech debt created, long-term ownership.
+        - People and dependencies: other teams, vendors, new library licenses.
+        - AI (if relevant): prompt injection, data leakage to models, non-determinism.
+    - List assumptions and open questions explicitly.
   tasks:
     - Never make changes to source code files outside of OpenSpec artifacts
 
