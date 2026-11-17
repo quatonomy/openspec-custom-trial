@@ -16,7 +16,6 @@ In no priority order.
 
 4. The skills can span multiple codebases, this will act as a monorepo, the src/ directory will contain relevant codebases, the changes/archives will specify clearly which codebases must be touched for features/tasks which could span multiple per change. Specs should follow this same principle. src/ will span an unlimited number of codebases, it will serve a specifc team - e.g a team has their own version of this monorepo named openspec-awesomeTeam1, which will be a monorepo and the src/ directory pointing to only the codebases they are responsible for. Context outside of this will be provided by the engineer when prompted by openspec for clarity on boundaries. DONE, NOT TESTED
 
-
 ### needs thinking over
 
 5. Add a way to allow for engineering agents to be able to view artifacts - likely the artifacts are added to a Linear item, this contains evidence of testing and how to verify success. I THINK THIS NEEDS TO BE A SEPERATE REPO. THIS WILL MEAN THIS REPO STAYS FOR PLANNING, THE OTHER REPO STAYS FOR ENGINEERING.
