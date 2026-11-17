@@ -12,4 +12,6 @@ In no priority order.
 
 3. Desite this being a forked/customized version, updated versions of OpenSpec by the author should be relatively simple to include in this repository, therefore changes to openspec logic must be as minimal as possible to achieve functional requirement without creating complex maintenance overhead.
 
-4. The openspec folder which contains changes, should be directly in the codebase repo it is editing, not in this monorepo, therefore the openspec skills should look within the src/ directory which will contain the codebases(s) that contain their own specific changes to them. Changes which span multiple repo's should have identifiable directory names across the repo's to showcase it is part of the same change.
+4. The skills can span multiple codebases, this will act as a monorepo, the src/ directory will contain relevant codebases, the changes/archives will specify clearly which codebases must be touched for features/tasks which could span multiple per change. Specs should follow this same principle. src/ will span an unlimited number of codebases, it will serve a specifc team - e.g a team has their own version of this monorepo named openspec-awesomeTeam1, which will be a monorepo and the src/ directory pointing to only the codebases they are responsible for. Context outside of this will be provided by the engineer when prompted by openspec for clarity on boundaries.
+
+5. 
