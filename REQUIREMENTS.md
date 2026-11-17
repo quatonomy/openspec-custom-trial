@@ -14,4 +14,3 @@ In no priority order.
 
 4. The skills can span multiple codebases, this will act as a monorepo, the src/ directory will contain relevant codebases, the changes/archives will specify clearly which codebases must be touched for features/tasks which could span multiple per change. Specs should follow this same principle. src/ will span an unlimited number of codebases, it will serve a specifc team - e.g a team has their own version of this monorepo named openspec-awesomeTeam1, which will be a monorepo and the src/ directory pointing to only the codebases they are responsible for. Context outside of this will be provided by the engineer when prompted by openspec for clarity on boundaries.
 
-5. 
