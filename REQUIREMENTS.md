@@ -8,7 +8,7 @@ In no priority order.
 
 1. An engineer can use all openspec skills ('.agents/skills/openspec-%') at they see fit and there is no mandating specific workflows at certain points, it must be fluid, only suggestion are permitted.
 
-2. Code is NOT constructed via any of the openspec skills, an engineer must use alternative skills outside of openspec to create code. Openspec skills are to form context, planning and detailed requirements.
+2. Code is NOT constructed via any of the openspec skills, an engineer must use alternative skills outside of openspec to create code. Openspec skills are to form context, planning and detailed requirements. The apply skill can create any useful tasks to showcase what is to be built but should not suggest strongly typed architectural decisions, at the most it should showcase technical boundaries, restrictions, blockers to overcome and solve.
 
 3. Desite this being a forked/customized version, updated versions of OpenSpec by the author should be relatively simple to include in this repository, therefore changes to openspec logic must be as minimal as possible to achieve functional requirement without creating complex maintenance overhead.
 
