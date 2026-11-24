@@ -21,18 +21,31 @@
 - Constructs specs, proposal, design and tasks
 
 ### 3. Develop
-- The fun part! 
-- Software architects use AI to help constuct high quality code layers
-- Software architects do not hand over coding tasks entirely to AI
-- Software architects must be accountable for code, not AI
-- Software architects must have context of code to make high quality decisions
-- Software architects that spend a large % of time reviewing AI code will fatigue and quality will reduce
-- Software architects that are bored will be less creative and innovative
+- Select the **Developer** agent in the agent picker for engineer-led development.
+- Use AI to help constuct high quality code layers
+- Do not hand over coding tasks entirely to AI
+- Engineers are accountable for code, not AI
+- Engineers must have context of code to make high quality decisions
+- Engineers that spend a large % of time reviewing AI code will fatigue and quality will reduce
+- Engineers that are bored will be less creative and innovative
 
 If risks are understood an option to use is 'apply' to automatically construct the code via openspec, not recommended for production code.
 ````/openspec-apply-change````
 
-### 4. Archive
+For an independent pull request review, select the **Reviewer** agent and
+provide a PR number or URL, or the exact local base and head. It reports
+findings without editing code or submitting a GitHub review.
+
+### 4. QA sign-off
+
+Select the **Tester** agent in the agent picker, then invoke
+`/qa-sign-off <change-name>`. This separate workflow
+uses the change documents to prepare functional and non-functional test cases,
+run agreed checks, and save results and evidence under the change's `qa/runs/`.
+It reports gaps and recommends readiness; an authorised human makes the sign-off
+decision. It does not configure a pipeline gate.
+
+### 5. Archive
 ````/openspec-archive````
 - Archives the change
 - Sync's specs & updates relevant docs
