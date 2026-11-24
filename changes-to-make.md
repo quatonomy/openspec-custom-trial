@@ -1,0 +1,4 @@
+- all looks good, apply is not so great but not too important as we don't want to use it!
+- need agents bespoke ones to work alongside with but does not have to be now, should be in this repo though
+- do not need agents now but need to know how it works e.g they can see specs etc.
+- submit this into main repo next

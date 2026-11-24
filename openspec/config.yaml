@@ -7,30 +7,40 @@ githubCopilot:
 # Include constraints an agent cannot infer by reading the code.
 # Keep general project documentation and discoverable codebase facts out.
 context: |
-  All OpenSpec artifacts live in the root openspec/, never inside src/
+  All OpenSpec artifacts live in the root openspec/, never inside src/.
+  Within /src is a 'team-definitions.md'; this contains a summary of each
+  team-owned repo within /src and pointers to more context where required.
+  Apply operation should NEVER be referenced unless specifically prompted by the user.
 
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.
 rules:
   proposal:
     - |
-      Challenge each area below. Give an answer or "N/A, because ..." and ask the engineer about anything unclear. Do not skip an area silently.
-        - Security: threat model (assets, actors, trust boundaries, entry points), authn/authz, input validation, secrets, supply chain, abuse cases, insider misuse.
-        - Data and privacy: data collected, stored or moved; classification (PII); encryption; retention and deletion; compliance; residency; audit logging.
-        - Reliability: failure modes, timeouts, retries, idempotency, partial failure, observability, alerting, runbook.
-        - Concurrency and consistency: races, ordering, eventual consistency, distributed transactions.
-        - Cross-codebase: affected codebases, contract or API changes, versioning, deploy order, consumers outside our boundary, shared data stores, ownership and approvals.
-        - Compatibility: backward and forward compatibility, migrations, deprecation and support period.
-        - Rollout: feature flags, rollback, non-prod testing, seed data, reversibility of the decision.
-        - Scale and cost: capacity, performance budgets, cloud spend, behavior at 10x load.
-        - Product: why now, cost of not doing it, non-goals, success measures, simpler alternatives, reuse of existing capabilities.
-        - Quality: testability, edge cases, error states, accessibility, i18n, UX impact.
-        - Maintenance: documentation, support impact, tech debt created, long-term ownership.
-        - People and dependencies: other teams, vendors, new library licenses.
-        - AI (if relevant): prompt injection, data leakage to models, non-determinism.
-    - List assumptions and open questions explicitly.
+      An OpenSpec artifact should always have an identifier at the start of the 
+      directory name, get this from the user during a proposal, do not create an artifact without it.
+      Challenge each bullet pointed area below as part of threat modelling.
+      Ask the user explictly on each area to challenge the proposal.
+      Continue to ask on an area until all relevant questions have been addressed.
+      Focus on one area at a time only, the questions will have a high level of detail in the question to clarify intention
+      Offer multiple choice with the option of a custom answer.
+      Never make assumptions, always ask for clarification:
+        - Data and privacy
+        - Accessibility
+        - Security
+        - Reliability
+        - Concurrency and consistency
+        - Rollout
+        - Scale and cost
+        - Quality
+        - Maintenance
+        - User experience and workflow
+        - Deployment and recovery
+        - Compliance and governance
+
   tasks:
-    - Never make changes to source code files outside of OpenSpec artifacts
+    - Always include estimation for a developer to complete the task. This covers context, design, implementation and testing effort. Avoid specific numbers and instead give the options of 'Hours - Small', 'Days - Medium', '<2 weeks - Large', '>2 weeks - Extra Large'. The estimation should be set for the full task list and not each individual checkbox task. 
+    - Specify if more than 1 developer can work on the task list simultaneously and independently from each other
 
 # Per-operation guidance (optional)
 # Add advisory guidance for how apply and archive work should be conducted.
@@ -38,5 +48,5 @@ rules:
 operations:
   apply:
     guidance:
-      - Never make changes to source code files outside of OpenSpec artifacts
-
+      - Never make changes source code files within /src autonomously
+      - if apply is triggered, ask the user if they want to proceed and allow the apply operation to make changes to source code files
