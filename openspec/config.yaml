@@ -50,3 +50,6 @@ operations:
     guidance:
       - Never make changes source code files within /src autonomously
       - if apply is triggered, ask the user if they want to proceed and allow the apply operation to make changes to source code files
+  archive:
+    guidance:
+      - Ensure any relevant documentation of the change is updated in the repo's documentation and the team-definitions.md file.
