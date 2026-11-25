@@ -1,4 +1,5 @@
-- all looks good, apply is not so great but not too important as we don't want to use it!
-- need agents bespoke ones to work alongside with but does not have to be now, should be in this repo though
-- do not need agents now but need to know how it works e.g they can see specs etc.
-- submit this into main repo next
+- seems like agents are not orchectsrating correctly, can just support skills instead?
+- or maybe just when we need specific actions like qa-sign-offs
+- qa-sign-off should aim to use bruno tests/playwright tests, if its not a test we want permanently then construct
+and run just for this change. do not need to solve now though maybe.
+- 
