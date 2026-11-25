@@ -1,7 +1,7 @@
 ### Team
 
-Responsible for building typescript based demo applications.
+Responsible for ...
 
-### typescript-demo
+### App1
 
-The first demo application of an api and web ui to manage users.
+App1 does some stuff
