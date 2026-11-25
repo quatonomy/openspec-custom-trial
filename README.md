@@ -39,3 +39,4 @@ If risks are understood an option to use is 'apply' to automatically construct t
 ## LATEST APPROVED VERSION
 
 ````openspec@v2.1.1````
+https://openspec.dev/docs/installation
